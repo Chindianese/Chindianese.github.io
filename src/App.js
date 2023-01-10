@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Button, colors, createTheme,CssBaseline,Switch,ThemeProvider, ToggleButton } from '@mui/material';
 import { useState } from 'react';

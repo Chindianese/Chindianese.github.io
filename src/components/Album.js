@@ -26,7 +26,7 @@ import dither2 from '../Dither Shaders (1).gif';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="secondary" align="center">
+    <Typography variant="body2" color="primary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://chindianese.github.io/">
         chindianese.github.io
@@ -39,20 +39,23 @@ function Copyright() {
 
 const cardData = [
   {title:"Sleeve", 
-  desc:"Web App for testing out tattoo sleeves. Use a preset tattoo or upload your own. Built in babylonJS and hosted on Firebase.",
+  desc:"Design tattoo sleeves.",
   moreInfo:
   <div>
 <Player
       src="sleeve trailer.mp4"
     />
-
+    <Typography>
+    Use a preset tattoo or upload your own. Built in babylonJS and hosted on Firebase.
+    </Typography>
   </div>
 
 },
   {title:"SelfieAI", 
-  desc:"Classify hair and facial features with neural network classification in unity. Models trained with google's inception graph, through tensorflow for poets in python for image classification. Models run through Unity Barracuda.",
+  desc:"Neural net in Unity",
   moreInfo:  
   <div>
+    <Typography>Classify hair and facial features with neural network classification in unity. Models trained with google's inception graph, through tensorflow for poets in python for image classification. Models run through Unity Barracuda.</Typography>
 <ImageList cols={2}>
   {[1,2,3,4].map((item) => (
     <ImageListItem key={item.img}>
@@ -74,18 +77,20 @@ const cardData = [
 },
   
    {title:"Dither Shaders", 
-  desc:"Built with shader graph in URP. Custom lighting shader code pixelates lighting, toons it, and adds a dither effect. ",
+  desc:"Custom Unity lighting",
   moreInfo:  
   <div>
+    <Typography>Built with shader graph in URP. Custom lighting shader code pixelates lighting, toons it, and adds a dither effect. </Typography>
  <img src={dither1} alt="loading..." width="100%"/>
  <img src={dither2} alt="loading..." width="100%"/>
     </div>,
 },
 {
   title:"Wet Shader", 
-desc:"Built with shader graph in URP. Wet ground and puddle shader blends height maps, and noise maps to create dynamic puddles.",
+desc:"Unity shader for dynamic wet ground",
 moreInfo:  
 <div>
+  <Typography>Built with shader graph in URP. Wet ground and puddle shader blends height maps, and noise maps to create dynamic puddles.</Typography>
 <Player width="100%"
       src="Wet Shader.mp4"
     />
@@ -94,6 +99,33 @@ moreInfo:
     <ImageListItem key={item.img}>
       <img
         src={`Wet Shader (${item}).jpg`}
+        alt={item}
+        loading="...."
+      />
+       {/* <ImageListItemBar
+            title={item}
+            subtitle={<span>by: {item.author}</span>}
+            position="below"
+          /> */}
+    </ImageListItem>
+    
+  ))}
+</ImageList>
+  </div>,
+},
+{
+  title:"EVE", 
+desc:"App for taking attendance",
+moreInfo:  
+<div>
+<Typography>
+Built in android studio with Google Firebase as an online Database. It was used during NYP freshmen orientation to take attendance of ~300 student.
+</Typography>
+<ImageList cols={2}>
+  {[2,3,4].map((item) => (
+    <ImageListItem key={item.img}>
+      <img
+        src={`EVE (${item}).jpg`}
         alt={item}
         loading="...."
       />
@@ -181,13 +213,13 @@ export default function Album() {
         </Container>
       {/* Footer */}
       <Box sx={{ p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom color="secondary">
+        <Typography variant="h6" align="center" gutterBottom color="primary">
           Tay Hao Cheng btw
         </Typography>
         <Typography
           variant="subtitle1"
           align="center"
-          color="secondary"
+          color="primary"
           component="p"
           >
           That's all folks
