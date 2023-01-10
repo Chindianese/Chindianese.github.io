@@ -42,7 +42,7 @@ const cardData = [
   desc:"Design tattoo sleeves.",
   moreInfo:
   <div>
-<Player
+<Player width="100%"
       src="sleeve trailer.mp4"
     />
     <Typography>

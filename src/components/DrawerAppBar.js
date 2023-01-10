@@ -40,7 +40,7 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <VideogameAssetIcon ></VideogameAssetIcon>
+          {/* <VideogameAssetIcon ></VideogameAssetIcon> */}
         <div>
         <Typography
             variant="h6">
