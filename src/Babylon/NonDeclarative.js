@@ -7,10 +7,6 @@ var g_toggleTheme
 function meshPicked(mesh) {
   console.log('mesh picked:', mesh)
 }
-// var isMobile = false
-// if (navigator && navigator.userAgentData)
-//   isMobile = navigator.userAgentData.mobile; //resolves true/fal
-
 var darkTheme = false
 
 function onSceneMount(e) {
@@ -37,10 +33,10 @@ function onSceneMount(e) {
   scene,
    (newMeshes)=> {
       newMeshes.forEach((bulb)=>{
-        var scale = 0.4;
+        var scale = 0.47;
         bulb.scaling = new Vector3(scale, scale, scale);
         // bulb.rotation = new Vector3(0, 0, 0);
-        bulb.position.set(0.0, -0, 0);
+        bulb.position.set(0.0, -0.0, 0);
 
        animateObj(bulb)
 
