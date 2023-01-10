@@ -36,6 +36,8 @@ const darkTheme = createTheme({
   },
   typography: {
     fontFamily: "Raleway",
+    subtitle2:{
+    }
   },
 })
 

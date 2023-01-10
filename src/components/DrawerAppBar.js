@@ -44,13 +44,13 @@ function ResponsiveAppBar() {
         <div>
         <Typography
             variant="h6">
-            HAO CHENG
+            TAY HAO CHENG
           </Typography>
-        </div>
           <Typography
             variant="subtitle1">
-           ame Developer
+           Game Developer
           </Typography>
+        </div>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
            

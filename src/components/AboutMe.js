@@ -1,15 +1,11 @@
+import { WidthFull } from '@mui/icons-material';
 import { Typography } from '@mui/material';
 import * as React from 'react';
 
 
 export default function AboutMe(props) {
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
   return (
-  <>
+  <div style={{ width: '70%', margin:'auto'}}>
     <Typography
               component="h1"
               variant="h2"
@@ -18,9 +14,10 @@ export default function AboutMe(props) {
             >
               About Me
             </Typography>
+
             <Typography color="primary.light">
                 I do mainly development in Unity Engine, and am experience with web development through React, and Babylon JS. I specialise in the technical art side, making shaders, particle effects, and development tools. 
             </Typography>
-  </>
+  </div>
   );
 }

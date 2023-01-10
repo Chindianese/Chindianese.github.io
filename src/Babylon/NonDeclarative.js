@@ -7,7 +7,11 @@ var g_toggleTheme
 function meshPicked(mesh) {
   console.log('mesh picked:', mesh)
 }
-var darkTheme = true
+var isMobile = false
+if (navigator && navigator.userAgentData)
+  isMobile = navigator.userAgentData.mobile; //resolves true/fal
+
+var darkTheme = !isMobile
 
 function onSceneMount(e) {
   const { canvas, scene } = e
@@ -122,7 +126,7 @@ var animateObj = (obj) =>
   //
   var toggleLighting = () =>{
     darkTheme = !darkTheme;
-    scene.clearColor = darkTheme ? new Color3(0.01,0.01,0.01) : new Color3(1,1,1)
+    scene.clearColor = darkTheme ? new Color3(0.009,0.009,0.009) : new Color3(1,1,1)
     light.intensity = darkTheme? 0.1 : 1.0;
     depthEnabled = !darkTheme;
     pipeline.depthOfFieldEnabled = depthEnabled;
