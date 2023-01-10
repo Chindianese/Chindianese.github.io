@@ -13,6 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Icon } from '@mui/material';
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
+import SocialMediaButtons from 'react-social-media-buttons';
+import SocialButtonsContainer from 'react-social-media-buttons';
 const pages = ['Projects', 'Pricing'];
 
 function ResponsiveAppBar() {
@@ -74,6 +76,12 @@ function ResponsiveAppBar() {
             tayhaocheng.work@gmail.com
           </Typography>
           </Box>
+          <SocialButtonsContainer
+  links={['https://github.com/Chindianese']}
+  buttonStyle={{margin: '0px 10px', backgroundColor: '#fbc203', borderRadius: '50%', border: '2px solid #000000'}}
+  iconStyle={{color: '#000000'}}
+  openNewTab={true}
+/>
         </Toolbar>
       </Container>
     </AppBar>
