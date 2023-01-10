@@ -16,13 +16,14 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ProjectCard from './ProjectCard';
-import { Player } from 'video-react';
+
 import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 
 
 import dither1 from '../dither.gif';
 import dither2 from '../Dither Shaders (1).gif';
 
+import ReactPlayer from 'react-player';
 
 function Copyright() {
   return (
@@ -42,8 +43,9 @@ const cardData = [
   desc:"Design tattoo sleeves.",
   moreInfo:
   <div>
-<Player width="100%"
-      src="sleeve trailer.mp4"
+<ReactPlayer  width="100%"
+      url="sleeve trailer.mp4"
+      controls={true}
     />
     <Typography>
     Use a preset tattoo or upload your own. Built in babylonJS and hosted on Firebase.
@@ -91,8 +93,9 @@ desc:"Unity shader for dynamic wet ground",
 moreInfo:  
 <div>
   <Typography>Built with shader graph in URP. Wet ground and puddle shader blends height maps, and noise maps to create dynamic puddles.</Typography>
-<Player width="100%"
-      src="Wet Shader.mp4"
+<ReactPlayer width="100%"
+      url="Wet Shader.mp4"
+      controls={true}
     />
 <ImageList cols={2}>
   {[2,3,4].map((item) => (
