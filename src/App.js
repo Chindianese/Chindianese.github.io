@@ -1,24 +1,65 @@
 import logo from './logo.svg';
 import './App.css';
+import { Button, colors, createTheme,CssBaseline,Switch,ThemeProvider, ToggleButton } from '@mui/material';
+import { useState } from 'react';
+import DrawerAppBar from './components/DrawerAppBar';
+import Album from './components/Album';
+
+const lightTheme = createTheme({
+  palette: {
+    mode:"light",
+    primary: {
+      main: '#fbc203'
+    },
+    background: {
+      default: "#ffffff"
+    },
+  },
+  typography: {
+    fontFamily: 'Quicksand',
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600,
+    fontWeightBold: 700,
+  }
+})
+const darkTheme = createTheme({
+  mode:"dark",
+  palette: {
+    primary: {
+      main: '#fbc203'
+    },
+    background: {
+      default: "#1E1E1E"
+    },
+  },
+  typography: {
+    fontFamily: 'Quicksand',
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600,
+    fontWeightBold: 700,
+  }
+})
 
 function App() {
+  const [theme, setTheme] = useState(darkTheme);
+  const toggleTheme = ()=>{
+    setTheme(theme === lightTheme ? darkTheme : lightTheme)
+  }
   return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline/>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DrawerAppBar></DrawerAppBar>
+        <Switch
+  onChange={toggleTheme}
+  inputProps={{ 'aria-label': 'controlled' }}
+/>
     </div>
+    
+    <Album></Album>
+    </ThemeProvider>
   );
 }
 
