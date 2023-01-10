@@ -7,14 +7,15 @@ var g_toggleTheme
 function meshPicked(mesh) {
   console.log('mesh picked:', mesh)
 }
-var isMobile = false
-if (navigator && navigator.userAgentData)
-  isMobile = navigator.userAgentData.mobile; //resolves true/fal
+// var isMobile = false
+// if (navigator && navigator.userAgentData)
+//   isMobile = navigator.userAgentData.mobile; //resolves true/fal
 
-var darkTheme = !isMobile
+var darkTheme = false
 
 function onSceneMount(e) {
   const { canvas, scene } = e
+  console.log('mount')
   var depthEnabled = false;
   scene.clearColor = new Color3(0.5,0.5,0.5)
  
@@ -45,8 +46,7 @@ function onSceneMount(e) {
 
       })
       // arm.name = 'arm';
-    
-      console.log('loaded')
+
   });
 
 
@@ -65,9 +65,6 @@ function onSceneMount(e) {
       })
       // arm.name = 'arm';
       lightning = newMeshes
-      console.log('loaded')
-
-
 
     });
 
@@ -93,7 +90,24 @@ function onSceneMount(e) {
   bgCamera.layerMask = 0x10000000;
  
   scene.activeCameras = [scene.activeCamera, bgCamera];
-
+  //
+  var toggleLighting = () =>{
+    console.log('toggle' + darkTheme)
+    darkTheme = !darkTheme;
+    scene.clearColor = darkTheme ? new Color3(0.009,0.009,0.009) : new Color3(1,1,1)
+    light.intensity = darkTheme? 0.1 : 1.0;
+    depthEnabled = !darkTheme;
+    pipeline.depthOfFieldEnabled = depthEnabled;
+   if(lightning)
+   {
+    lightning.forEach((v)=>{
+      v.setEnabled(!darkTheme)
+    })
+   }
+  
+  }
+  
+  toggleLighting()
   
 var animateObj = (obj) =>
 {
@@ -123,23 +137,7 @@ var animateObj = (obj) =>
        
            scene.beginAnimation(obj, 0, 60, true);
 }
-  //
-  var toggleLighting = () =>{
-    darkTheme = !darkTheme;
-    scene.clearColor = darkTheme ? new Color3(0.009,0.009,0.009) : new Color3(1,1,1)
-    light.intensity = darkTheme? 0.1 : 1.0;
-    depthEnabled = !darkTheme;
-    pipeline.depthOfFieldEnabled = depthEnabled;
-   if(lightning)
-   {
-    lightning.forEach((v)=>{
-      v.setEnabled(!darkTheme)
-    })
-   }
-  
-  }
-  
-  toggleLighting()
+
   // Move depth of field focus distance automatically at the start
   scene.onBeforeRenderObservable.add(function(){
       if(moveFocusDistance){
