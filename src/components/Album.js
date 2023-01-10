@@ -81,6 +81,33 @@ const cardData = [
  <img src={dither2} alt="loading..." width="100%"/>
     </div>,
 },
+{
+  title:"Wet Shader", 
+desc:"Built with shader graph in URP. Wet ground and puddle shader blends height maps, and noise maps to create dynamic puddles.",
+moreInfo:  
+<div>
+<Player
+      src="Wet Shader.mp4"
+    />
+<ImageList cols={2}>
+  {[2,3,4].map((item) => (
+    <ImageListItem key={item.img}>
+      <img
+        src={`Wet Shader (${item}).jpg`}
+        alt={item}
+        loading="...."
+      />
+       {/* <ImageListItemBar
+            title={item}
+            subtitle={<span>by: {item.author}</span>}
+            position="below"
+          /> */}
+    </ImageListItem>
+    
+  ))}
+</ImageList>
+  </div>,
+},
 ]
 
 export default function Album() {
