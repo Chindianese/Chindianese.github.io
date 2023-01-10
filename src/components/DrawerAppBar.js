@@ -46,11 +46,11 @@ function ResponsiveAppBar() {
             variant="h6">
             TAY HAO CHENG
           </Typography>
+        </div>
           <Typography
             variant="subtitle1">
-           Game Developer
+           ame Developer
           </Typography>
-        </div>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
            
@@ -71,10 +71,10 @@ function ResponsiveAppBar() {
 
           <Box sx={{ flexGrow: 0 }}>
           </Box>
-<Typography
+{/* <Typography
             variant="subtitle2">
            tayhaocheng@gmail.com
-          </Typography>
+          </Typography> */}
          
           <SocialButtonsContainer
   links={['https://github.com/Chindianese']}

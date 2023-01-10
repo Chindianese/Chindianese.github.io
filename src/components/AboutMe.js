@@ -18,6 +18,9 @@ export default function AboutMe(props) {
             <Typography color="primary.light">
                 I do mainly development in Unity Engine, and am experience with web development through React, and Babylon JS. I specialise in the technical art side, making shaders, particle effects, and development tools. 
             </Typography>
+            <Typography variant="h6" color="primary.dark">
+                tayhaocheng@gmail.com
+            </Typography>
   </div>
   );
 }
