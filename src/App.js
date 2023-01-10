@@ -4,6 +4,7 @@ import { Button, colors, createTheme,CssBaseline,Switch,ThemeProvider, ToggleBut
 import { useState } from 'react';
 import DrawerAppBar from './components/DrawerAppBar';
 import Album from './components/Album';
+import NonDeclarative from './Babylon/NonDeclarative';
 
 const lightTheme = createTheme({
   palette: {
@@ -52,13 +53,15 @@ function App() {
       <CssBaseline/>
     <div className="App">
       <DrawerAppBar></DrawerAppBar>
-        <Switch
+        {/* <Switch
   onChange={toggleTheme}
   inputProps={{ 'aria-label': 'controlled' }}
-/>
-    </div>
-    
+/> */}
+    <div className='BabylonContainer'>
+   <div className='Babylon'> <NonDeclarative toggleTheme={toggleTheme}></NonDeclarative></div>
+   </div>
     <Album></Album>
+    </div>
     </ThemeProvider>
   );
 }

@@ -86,7 +86,7 @@ const cardData = [
 desc:"Built with shader graph in URP. Wet ground and puddle shader blends height maps, and noise maps to create dynamic puddles.",
 moreInfo:  
 <div>
-<Player
+<Player width="100%"
       src="Wet Shader.mp4"
     />
 <ImageList cols={2}>
@@ -126,13 +126,12 @@ export default function Album() {
               variant="h2"
               align="center"
               color="primary"
-              gutterBottom
             >
               Projects
             </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            {/* <Typography variant="h5" align="center" color="text.secondary" paragraph>
 ..
-            </Typography>
+            </Typography> */}
             {/* <Stack
               sx={{ pt: 4 }}
               direction="row"
