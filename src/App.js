@@ -4,14 +4,17 @@ import { useState } from 'react';
 import DrawerAppBar from './components/DrawerAppBar';
 import Album from './components/Album';
 import NonDeclarative from './Babylon/NonDeclarative';
+import AboutMe from './components/AboutMe';
 
 
 const lightTheme = createTheme({
   palette: {
     mode:"light",
     primary: {
-      main: '#fbc203'
+      main: '#fbc203',
+      light:'#000000'
     },
+
     background: {
       default: "#ffffff"
     },
@@ -24,7 +27,8 @@ const darkTheme = createTheme({
   mode:"dark",
   palette: {
     primary: {
-      main: '#fbc203'
+      main: '#fbc203',
+      light:'#ffffff'
     },
     background: {
       default: "#1E1E1E"
@@ -52,6 +56,7 @@ function App() {
     <div className='BabylonContainer'>
    <div className='Babylon'> <NonDeclarative toggleTheme={toggleTheme}></NonDeclarative></div>
    </div>
+   <AboutMe></AboutMe>
     <Album></Album>
     </div>
     </ThemeProvider>

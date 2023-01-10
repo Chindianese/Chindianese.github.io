@@ -44,7 +44,7 @@ function ResponsiveAppBar() {
         <div>
         <Typography
             variant="h6">
-            TAY HAO CHENG
+            HAO CHENG
           </Typography>
         </div>
           <Typography
@@ -70,15 +70,15 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-          <Typography
-            variant="h6"
-          >
-            tayhaocheng.work@gmail.com
-          </Typography>
           </Box>
+<Typography
+            variant="subtitle2">
+           tayhaocheng@gmail.com
+          </Typography>
+         
           <SocialButtonsContainer
   links={['https://github.com/Chindianese']}
-  buttonStyle={{margin: '0px 10px', backgroundColor: '#fbc203', borderRadius: '50%', border: '2px solid #000000'}}
+  buttonStyle={{margin: '0px 1px', backgroundColor: '#fbc203', borderRadius: '50%', border: '2px solid #000000'}}
   iconStyle={{color: '#000000'}}
   openNewTab={true}
 />
