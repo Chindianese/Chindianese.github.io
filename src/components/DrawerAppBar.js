@@ -11,8 +11,8 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-
+import { Icon } from '@mui/material';
+import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 const pages = ['Projects', 'Pricing'];
 
 function ResponsiveAppBar() {
@@ -38,11 +38,16 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-          >
+          <VideogameAssetIcon ></VideogameAssetIcon>
+        <div>
+        <Typography
+            variant="h6">
             TAY HAO CHENG
+          </Typography>
+        </div>
+          <Typography
+            variant="subtitle1">
+           ame Developer
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

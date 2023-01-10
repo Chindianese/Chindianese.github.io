@@ -6,6 +6,7 @@ import DrawerAppBar from './components/DrawerAppBar';
 import Album from './components/Album';
 import NonDeclarative from './Babylon/NonDeclarative';
 
+
 const lightTheme = createTheme({
   palette: {
     mode:"light",
@@ -17,11 +18,7 @@ const lightTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Quicksand',
-    fontWeightLight: 400,
-    fontWeightRegular: 500,
-    fontWeightMedium: 600,
-    fontWeightBold: 700,
+    fontFamily: "Raleway",
   }
 })
 const darkTheme = createTheme({
@@ -35,12 +32,8 @@ const darkTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Quicksand',
-    fontWeightLight: 400,
-    fontWeightRegular: 500,
-    fontWeightMedium: 600,
-    fontWeightBold: 700,
-  }
+    fontFamily: "Raleway",
+  },
 })
 
 function App() {
