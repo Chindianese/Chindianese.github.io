@@ -1,8 +1,7 @@
-import React from 'react'
-import { Engine, Material, Scene, StandardMaterial } from 'react-babylonjs'
-import { Color3, FreeCamera, Vector3, ArcRotateCamera, DefaultRenderingPipeline, HemisphericLight, DepthOfFieldEffectBlurLevel, PBRMetallicRoughnessMaterial, CubeTexture, Mesh, SceneLoader, Animation } from '@babylonjs/core';
-import { Control, TextBlock, Slider, StackPanel, AdvancedDynamicTexture } from '@babylonjs/gui'
-import '@babylonjs/loaders'
+import { Animation, ArcRotateCamera, Color3, CubeTexture, DefaultRenderingPipeline, DepthOfFieldEffectBlurLevel, FreeCamera, HemisphericLight, PBRMetallicRoughnessMaterial, SceneLoader, Vector3 } from '@babylonjs/core';
+import '@babylonjs/loaders';
+import React from 'react';
+import { Engine, Scene } from 'react-babylonjs';
 var g_toggleTheme
 function meshPicked(mesh) {
   console.log('mesh picked:', mesh)
@@ -10,7 +9,7 @@ function meshPicked(mesh) {
 var darkTheme = false
 
 function onSceneMount(e) {
-  const { canvas, scene } = e
+  const { scene } = e
   console.log('mount')
   var depthEnabled = false;
   scene.clearColor = new Color3(0.5,0.5,0.5)
@@ -28,7 +27,7 @@ function onSceneMount(e) {
 
 
  // var knot = Mesh.CreateTorusKnot("knot", 0.2, 0.05, 128, 64, 2, 3, scene);
-  var bulb = SceneLoader.ImportMesh("",
+  SceneLoader.ImportMesh("",
   "", "lightbulb.glb",
   scene,
    (newMeshes)=> {
