@@ -38,9 +38,10 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+            <Box width="100%" paddingLeft={1} paddingRight={1} >
+        <Toolbar disableGutters={true}>
           {/* <VideogameAssetIcon ></VideogameAssetIcon> */}
+
         <div>
         <Typography
             variant="h6">
@@ -51,25 +52,15 @@ function ResponsiveAppBar() {
             variant="subtitle1">
            ame Developer
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
            
            
           </Box>
        
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {/* {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))} */}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 1 }}>
           </Box>
 {/* <Typography
             variant="subtitle2">
@@ -83,7 +74,7 @@ function ResponsiveAppBar() {
   openNewTab={true}
 />
         </Toolbar>
-      </Container>
+      </Box>
     </AppBar>
   );
 }
