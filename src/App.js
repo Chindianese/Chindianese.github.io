@@ -1,10 +1,10 @@
-import './App.css';
-import { Button, colors, createTheme,CssBaseline,Switch,ThemeProvider, ToggleButton } from '@mui/material';
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import { useState } from 'react';
-import DrawerAppBar from './components/DrawerAppBar';
-import Album from './components/Album';
+import './App.css';
 import NonDeclarative from './Babylon/NonDeclarative';
 import AboutMe from './components/AboutMe';
+import Album from './components/Album';
+import DrawerAppBar from './components/DrawerAppBar';
 
 
 const lightTheme = createTheme({

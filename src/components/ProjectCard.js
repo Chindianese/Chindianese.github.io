@@ -33,7 +33,7 @@ export default function ProjectCard(props) {
     setExpanded(!expanded);
   };
   return (
-    <Card   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} >
+    <Card   sx={{  display: 'flex', flexDirection: 'column' }} >
     
     <CardMedia
                     component="img"

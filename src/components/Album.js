@@ -1,28 +1,17 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Button from '@mui/material/Button';
-import CameraIcon from '@mui/icons-material/PhotoCamera';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
 import ProjectCard from './ProjectCard';
 
-import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
+import { ImageList, ImageListItem } from '@mui/material';
 
 
-import dither1 from '../dither.gif';
 import dither2 from '../Dither Shaders (1).gif';
+import dither1 from '../dither.gif';
 
+import { Masonry } from '@mui/lab';
 import ReactPlayer from 'react-player';
 
 function Copyright() {
@@ -164,65 +153,25 @@ export default function Album() {
             >
               Projects
             </Typography>
-            {/* <Typography variant="h5" align="center" color="text.secondary" paragraph>
-..
-            </Typography> */}
-            {/* <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
-            </Stack> */}
           </Container>
         </Box>
         <Container sx={{ py: 2 }} maxWidth="md">
           {/* End hero unit */}
-          <Grid container spacing={2}>
+          <Masonry columns={{ xs: 1, sm: 2,md:3}} spacing={2}>
             {cardData.map((card) => (
-              <Grid item key={card} xs={12} sm={4} md={6}>
-                <ProjectCard cardData={card}/>
-                {/* <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                >
-                  <CardMedia
-                    component="img"
-                    sx={{
-                      // 16:9
-                      pt: '0.75%',
-                    }}
-                    //image="https://source.unsplash.com/random"
-                    image="https://source.unsplash.com/random"
-                    alt="random"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                     { card.title}
-                    </Typography>
-                    <Typography>
-                      {card.desc}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
-                  </CardActions>
-                </Card> */}
-              </Grid>
+                <ProjectCard cardData={card}/>                
             ))}
-          </Grid>
+          </Masonry>
         </Container>
       {/* Footer */}
       <Box sx={{ p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom color="primary">
+        <Typography variant="h6" align="center" gutterBottom color="primary.light">
           Tay Hao Cheng btw
         </Typography>
         <Typography
           variant="subtitle1"
           align="center"
-          color="primary"
+          color="primary.light"
           component="p"
           >
           That's all folks
