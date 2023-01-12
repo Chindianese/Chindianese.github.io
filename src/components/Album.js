@@ -155,7 +155,7 @@ export default function Album() {
             </Typography>
           </Container>
         </Box>
-        <Container sx={{ py: 2 }} maxWidth="md">
+        <Container sx={{ py: 2 }} maxWidth="xl">
           {/* End hero unit */}
           <Masonry columns={{ xs: 1, sm: 2,md:3}} spacing={2}>
             {cardData.map((card) => (
