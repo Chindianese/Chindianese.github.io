@@ -5,7 +5,7 @@ import NonDeclarative from './Babylon/NonDeclarative';
 import AboutMe from './components/AboutMe';
 import Album from './components/Album';
 import DrawerAppBar from './components/DrawerAppBar';
-
+import Experience from './components/Experience';
 
 const lightTheme = createTheme({
   palette: {
@@ -71,6 +71,7 @@ function App() {
    <div className='Babylon'> <NonDeclarative toggleTheme={toggleTheme}></NonDeclarative></div>
    </div>
    <AboutMe></AboutMe>
+   <Experience></Experience>
     <Album></Album>
     </div>
     </ThemeProvider>
