@@ -1,3 +1,4 @@
+import { TextRotateUp } from '@mui/icons-material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -25,6 +26,8 @@ export default function ProjectCard(props) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+  const text = props.cardData.moreInfo + ''
+  const para = text.split('\n').map(str => <p>{str}</p>)
   return (
     <Card   sx={{  display: 'flex', flexDirection: 'column' }} >
     
@@ -60,7 +63,9 @@ export default function ProjectCard(props) {
 
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          {props.cardData.moreInfo}
+          {
+           para
+          }
         </CardContent>
       </Collapse>
     </Card>
