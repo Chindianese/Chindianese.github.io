@@ -24,8 +24,8 @@ function Copyright() {
 
 const cardData = [
   {title:"Immersively", 
-  desc:"Unity Developer - 2021",
-  moreInfo: "iMMERSiVELY an Innovation Technology consultancy. eXtended Reality (XR). Virtual Simulations. Gamified Experiences."
+  desc:"Unity Developer (Feb 2021 - Jun 2021)",
+  moreInfo: "Developed in Unity Engine as a project lead.\nProvided technical design documentation and feature descriptions for developers and interns to use.\nImplemented and managed sprint workflow. \nManaged version control through git."
 }
 ]
 
