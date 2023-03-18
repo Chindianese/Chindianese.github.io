@@ -21,16 +21,17 @@ function Copyright() {
     </Typography>
   );
 }
-
+const text = "I started as an intern and got hired to continue for 5 more months until I enlisted."
++ "\nI worked as a unity developer and project lead managing future interns and junior developers. "
++"Leading the projects entails understanding project requirements and creating the game design and technical design documents, and distributing the tasks to the other developers."
++"\nI also managed sprint workflow, conducting daily scrums and bi-weekly spring reviews and planning."
++"\nI moved the company projects onto GitHub and used a git-flow workstyle among the developers. "
++"\nuring my time there, I made VR projects in team sizes of 2-3, image classification machine learning, and mobile games."
+const para = text.split('\n').map(str => <p>{str}</p>)
 const cardData = [
   {title:"Immersively", 
   desc:"Unity Developer (Feb 2021 - Jun 2021)",
-  moreInfo: "I started as an intern and got hired to continue for 5 more months until I enlisted."
-  + "\nI worked as a unity developer and project lead managing future interns and junior developers. "
-  +"Leading the projects entails understanding project requirements and creating the game design and technical design documents, and distributing the tasks to the other developers."
-  +"\nI also managed sprint workflow, conducting daily scrums and bi-weekly spring reviews and planning."
-  +"\nI moved the company projects onto GitHub and used a git-flow workstyle among the developers. "
-  +"\nuring my time there, I made VR projects in team sizes of 2-3, image classification machine learning, and mobile games."
+  moreInfo: para
 }
 ]
 

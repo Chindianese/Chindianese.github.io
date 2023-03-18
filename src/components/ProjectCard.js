@@ -26,8 +26,7 @@ export default function ProjectCard(props) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  const text = props.cardData.moreInfo + ''
-  const para = text.split('\n').map(str => <p>{str}</p>)
+
   return (
     <Card   sx={{  display: 'flex', flexDirection: 'column' }} >
     
@@ -63,9 +62,7 @@ export default function ProjectCard(props) {
 
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          {
-           para
-          }
+        {props.cardData.moreInfo}
         </CardContent>
       </Collapse>
     </Card>
