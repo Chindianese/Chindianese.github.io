@@ -39,6 +39,7 @@ const cardData = [
     <Typography>
     Use a preset tattoo or upload your own. Built in babylonJS and hosted on Firebase.
     </Typography>
+    <Link href="https://slee-ve.web.app/">https://slee-ve.web.app/</Link>
   </div>
 
 },
