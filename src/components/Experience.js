@@ -1,6 +1,5 @@
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import ProjectCard from './ProjectCard';
@@ -9,18 +8,18 @@ import ProjectCard from './ProjectCard';
 import { Masonry } from '@mui/lab';
 
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="primary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://chindianese.github.io/">
-        chindianese.github.io
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+// function Copyright() {
+//   return (
+//     <Typography variant="body2" color="primary" align="center">
+//       {'Copyright © '}
+//       <Link color="inherit" href="https://chindianese.github.io/">
+//         chindianese.github.io
+//       </Link>{' '}
+//       {new Date().getFullYear()}
+//       {'.'}
+//     </Typography>
+//   );
+// }
 
 const cardData = [
   {title:"Immersively", 

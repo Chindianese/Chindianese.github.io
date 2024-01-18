@@ -26,37 +26,36 @@ export default function ProjectCard(props) {
     setExpanded(!expanded);
   };
   return (
-    <Card   sx={{  display: 'flex', flexDirection: 'column' }} >
-    
-    <CardMedia
-                    component="img"
+    <Card sx={{ display: 'flex', flexDirection: 'column' }} >
 
-                    image={props.cardData.title === "title" ? "https://source.unsplash.com/random" : `${props.cardData.title} (1).jpg`}
-                    alt="random"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      {props.cardData.title}
-                    </Typography>
-                    <Typography>
-                     {props.cardData.desc}
-                    </Typography>
-                  </CardContent>
+      <CardMedia
+        component="img"
+        image={props.cardData.title === "title" ? "https://source.unsplash.com/random" : `${props.cardData.title.replace('?', '')} (1).jpg`}
+        alt="random"
+      />
+      <CardContent sx={{ flexGrow: 1 }}>
+        <Typography gutterBottom variant="h5" component="h2">
+          {props.cardData.title}
+        </Typography>
+        <Typography>
+          {props.cardData.desc}
+        </Typography>
+      </CardContent>
 
-        {/* <IconButton aria-label="add to favorites">
+      {/* <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton> */}
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
+      <ExpandMore
+        expand={expanded}
+        onClick={handleExpandClick}
+        aria-expanded={expanded}
+        aria-label="show more"
+      >
+        <ExpandMoreIcon />
+      </ExpandMore>
 
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
