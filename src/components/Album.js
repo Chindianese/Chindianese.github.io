@@ -65,21 +65,6 @@ const cardData = [
 
   },
   {
-    title: "Sleeve",
-    desc: "Design tattoo sleeves.",
-    moreInfo:
-      <div>
-        <ReactPlayer width="100%"
-          url="sleeve trailer.mp4"
-          controls={true}
-        />
-        <Typography>
-          Use a preset tattoo or upload your own. Built in babylonJS and hosted on Firebase.
-        </Typography>
-      </div>
-
-  },
-  {
     title: "Dither Shaders",
     desc: "Custom Unity lighting",
     moreInfo:
