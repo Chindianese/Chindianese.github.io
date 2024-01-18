@@ -4,7 +4,7 @@ import * as React from 'react';
 
 export default function AboutMe(props) {
   return (
-    <div style={{ width: '70%', margin: 'auto' }}>
+    <div style={{ width: '60%', margin: 'auto' }}>
       <Typography
         component="h1"
         variant="h2"
@@ -17,7 +17,7 @@ export default function AboutMe(props) {
         I like making stuff. Please hire me. 👉🏾👈🏾
       </Typography>
       <Typography variant="h6" color="primary.dark">
-        tayhaocheng@gmail.com
+        tayhaocheng.work@gmail.com
       </Typography>
     </div>
   );

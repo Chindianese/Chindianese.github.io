@@ -7,24 +7,17 @@ import ProjectCard from './ProjectCard';
 
 import { Masonry } from '@mui/lab';
 
-
-// function Copyright() {
-//   return (
-//     <Typography variant="body2" color="primary" align="center">
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://chindianese.github.io/">
-//         chindianese.github.io
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
-
+const text = "I started as an intern and got hired to continue for 5 more months until I enlisted."
++ "\nI worked as a unity developer and project lead managing future interns and junior developers. "
++"Leading the projects entails understanding project requirements and creating the game design and technical design documents, and distributing the tasks to the other developers."
++"\nI also managed sprint workflow, conducting daily scrums and bi-weekly spring reviews and planning."
++"\nI moved the company projects onto GitHub and used a git-flow workstyle among the developers. "
++"\nuring my time there, I made VR projects in team sizes of 2-3, image classification machine learning, and mobile games."
+const para = text.split('\n').map(str => <p>{str}</p>)
 const cardData = [
   {title:"Immersively", 
-  desc:"Unity Developer - 2021",
-  moreInfo: "iMMERSiVELY an Innovation Technology consultancy. eXtended Reality (XR). Virtual Simulations. Gamified Experiences."
+  desc:"Unity Developer (Feb 2021 - Jun 2021)",
+  moreInfo: para
 }
 ]
 

@@ -47,6 +47,21 @@ const cardData = [
         <div><a href="https://testflight.apple.com/join/tvvllsP3">ios</a></div>
         <div><a href="https://play.google.com/store/apps/details?id=com.chindianese.areyouskatingtoday">andriod</a></div>
       </div>
+  },
+  {
+    title: "Sleeve",
+    desc: "Design tattoo sleeves.",
+    moreInfo:
+      <div>
+        <ReactPlayer width="100%"
+          url="sleeve trailer.mp4"
+          controls={true}
+        />
+        <Typography>
+          Use a preset tattoo or upload your own. Built in babylonJS and hosted on Firebase.
+        </Typography>
+        <Link href="https://slee-ve.web.app/">https://slee-ve.web.app/</Link>
+      </div>
 
   },
   {
