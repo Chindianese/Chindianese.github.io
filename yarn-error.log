@@ -1,0 +1,92 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Users\tayha\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Java\jdk-11\bin;C:\Program Files\PuTTY\;C:\Users\tayha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\tayha\AppData\Local\Programs\Python\Python311\;C:\Users\tayha\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\tayha\GitHubDesktop\bin;C:\Users\tayha\AppData\Local\GitHubDesktop\bin;C:\Users\tayha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\tayha\.dotnet\tools;C:\Users\tayha\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Java\jdk-11;
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.3.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.15.5.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\tayha\AppData\Roaming\nvm\v20.3.0\node_modules\yarn\lib\cli.js:141517:19)
+      at Object.onceWrapper (node:events:625:28)
+      at ClientRequest.emit (node:events:511:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:840:9)
+      at Object.onceWrapper (node:events:625:28)
+      at TLSSocket.emit (node:events:523:35)
+      at Socket._onTimeout (node:net:582:8)
+      at listOnTimeout (node:internal/timers:573:17)
+      at process.processTimers (node:internal/timers:514:7)
+
+npm manifest: 
+  {
+    "name": "portfolio-again",
+    "version": "0.1.0",
+    "homepage": "https://Chindianese.github.io",
+    "private": true,
+    "dependencies": {
+      "@babylonjs/core": "^5.41.0",
+      "@babylonjs/gui": "^5.41.0",
+      "@babylonjs/loaders": "^5.41.0",
+      "@emotion/react": "^11.10.5",
+      "@emotion/styled": "^11.10.5",
+      "@fontsource/roboto": "^4.5.8",
+      "@mui/icons-material": "^5.11.0",
+      "@mui/lab": "^5.0.0-alpha.115",
+      "@mui/material": "^5.11.4",
+      "@testing-library/jest-dom": "^5.16.5",
+      "@testing-library/react": "^13.4.0",
+      "@testing-library/user-event": "^13.5.0",
+      "react": "^18.2.0",
+      "react-babylonjs": "^3.1.15",
+      "react-dom": "^18.2.0",
+      "react-player": "^2.11.0",
+      "react-scripts": "5.0.1",
+      "react-social-media-buttons": "^1.0.8",
+      "redux": "^4.2.0",
+      "video-react": "^0.16.0",
+      "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build",
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "gh-pages": "^4.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
