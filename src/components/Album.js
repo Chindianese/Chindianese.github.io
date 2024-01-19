@@ -44,7 +44,7 @@ const cardData = [
           Built in react native.
         </Typography>
         
-        <div><a href="https://testflight.apple.com/join/tvvllsP3">ios</a></div>
+        <div><a href="https://apps.apple.com/us/app/skate/id6451195071">ios</a></div>
         <div><a href="https://play.google.com/store/apps/details?id=com.chindianese.areyouskatingtoday">andriod</a></div>
       </div>
   },
