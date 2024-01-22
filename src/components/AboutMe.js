@@ -1,5 +1,7 @@
 import { Typography } from '@mui/material';
 import * as React from 'react';
+import Coffee from './Coffee';
+
 
 
 export default function AboutMe(props) {
@@ -16,6 +18,8 @@ export default function AboutMe(props) {
       <Typography color="primary.light">
         I like making stuff. Please hire me. 👉🏾👈🏾
       </Typography>
+      <Typography color="primary.light">Or..</Typography>
+      <Coffee></Coffee>
       <Typography variant="h6" color="primary.dark">
         tayhaocheng.work@gmail.com
       </Typography>

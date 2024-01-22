@@ -4,9 +4,9 @@
   "homepage": "https://Chindianese.github.io",
   "private": true,
   "dependencies": {
-    "@babylonjs/core": "^5.41.0",
-    "@babylonjs/gui": "^5.41.0",
-    "@babylonjs/loaders": "^5.41.0",
+    "@babylonjs/core": "^6.39.0",
+    "@babylonjs/gui": "^6.39.0",
+    "@babylonjs/loaders": "^6.39.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/roboto": "^4.5.8",
@@ -23,6 +23,7 @@
     "react-scripts": "5.0.1",
     "react-social-media-buttons": "^1.0.8",
     "redux": "^4.2.0",
+    "styled-components": "^6.1.8",
     "video-react": "^0.16.0",
     "web-vitals": "^2.1.4"
   },
