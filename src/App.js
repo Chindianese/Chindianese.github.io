@@ -89,6 +89,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <h1 style={{fontSize:0 }}>Tay Hao Cheng - A Technical Artist based in Singapore</h1>
       <div className="App">
         <DrawerAppBar></DrawerAppBar>
         {/* <Switch
