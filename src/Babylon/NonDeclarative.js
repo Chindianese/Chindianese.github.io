@@ -1,4 +1,4 @@
-import { Animation, ArcRotateCamera, Color3, CubeTexture, DefaultRenderingPipeline, DepthOfFieldEffectBlurLevel, FreeCamera, HemisphericLight, PBRMetallicRoughnessMaterial, SceneLoader, Vector3 } from '@babylonjs/core';
+import { Animation, ArcRotateCamera, Color3, CubeTexture, DefaultRenderingPipeline, DepthOfFieldEffectBlurLevel, FreeCamera, HemisphericLight, PBRMetallicRoughnessMaterial, SceneLoader, Sprite, SpriteManager, Vector3 } from '@babylonjs/core';
 import '@babylonjs/loaders';
 import React from 'react';
 import { Engine, Scene } from 'react-babylonjs';
@@ -12,8 +12,8 @@ function onSceneMount(e) {
   const { scene } = e
   console.log('mount')
   var depthEnabled = false;
-  scene.clearColor = new Color3(0.5,0.5,0.5)
- 
+  scene.clearColor = new Color3(0,0,0)
+
   var camera = new FreeCamera("camera1", new Vector3(0, 0.0, -1.0), scene);
   camera.speed = 0.01;
   camera.minZ = 0.01;
@@ -25,7 +25,22 @@ function onSceneMount(e) {
   pbr.environmentTexture = CubeTexture.CreateFromPrefilteredData("textures/environment.dds", scene);
  
 
+  const clickmesm = new SpriteManager("treesManager", "clickme.png", 1, {width: 948, height: 440});
+  const clickmewhitesm = new SpriteManager("treesManager",  "clickmewhite.png", 1, {width: 948, height: 440});
+  const clickme = new Sprite("clickme", clickmesm);
+  const clickmewhite = new Sprite("clickmewhite", clickmewhitesm);
+  clickme.width = 0.8;
+  clickme.height = 0.3;
+  clickme.position.y = -0.2
+  clickme.position.x = 0.5
 
+
+  clickmewhite.width = 0.8;
+  clickmewhite.height = 0.3;
+  clickmewhite.position.y = -0.2
+  clickmewhite.position.x = 0.5
+
+  
  // var knot = Mesh.CreateTorusKnot("knot", 0.2, 0.05, 128, 64, 2, 3, scene);
   SceneLoader.ImportMesh("",
   "", "lightbulb.glb",
@@ -36,9 +51,7 @@ function onSceneMount(e) {
         bulb.scaling = new Vector3(scale, scale, scale);
         // bulb.rotation = new Vector3(0, 0, 0);
         bulb.position.set(0.0, -0.0, 0);
-
        animateObj(bulb)
-
       })
       // arm.name = 'arm';
 
@@ -89,10 +102,13 @@ function onSceneMount(e) {
   var toggleLighting = () =>{
     console.log('toggle' + darkTheme)
     darkTheme = !darkTheme;
-    scene.clearColor = darkTheme ? new Color3(0.009,0.009,0.009) : new Color3(1,1,1)
+    const val = 0.004
+    scene.clearColor = darkTheme ? new Color3(val,val,val) : new Color3(1,1,1)
     light.intensity = darkTheme? 0.1 : 1.0;
     depthEnabled = !darkTheme;
     pipeline.depthOfFieldEnabled = depthEnabled;
+    clickmewhite.isVisible = darkTheme;
+    clickme.isVisible = !darkTheme;
    if(lightning)
    {
     lightning.forEach((v)=>{
