@@ -6,7 +6,7 @@ import Coffee from './Coffee';
 
 export default function AboutMe(props) {
   return (
-    <Container style={{ margin: 'auto', } }maxWidth="md">
+    <Container style={{ margin: 'auto', } }maxWidth="md">   
       <Typography
         component="h1"
         variant="h2"
@@ -15,7 +15,17 @@ export default function AboutMe(props) {
         About Me
       </Typography>
       <Typography color="primary.light">
-        Hey there! I'm Hao Cheng and I like making stuff that looks cool. I am a software developer with a passion for technical art. 
+        Hey there! I am
+      </Typography>
+      <Typography
+        component="h1"
+        variant="h1"
+        align="center"
+        color="primary">
+        Tay Hao Cheng - A Technical Artist based in Singapore
+      </Typography>
+      <Typography color="primary.light">
+        ...and I like making stuff that looks cool.
       </Typography>
       <Typography color="primary.light">
        I specialise in game development and most of my experience is in Unity, but I'm also well-versed in mobile app development (React Native & PWAs) and web development (ReactJS).
