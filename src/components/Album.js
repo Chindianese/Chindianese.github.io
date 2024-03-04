@@ -7,36 +7,39 @@ import ProjectCard from './ProjectCard';
 
 import { ImageList, ImageListItem } from '@mui/material';
 
-
-import dither2 from '../Dither Shaders (1).gif';
-import dither1 from '../dither.gif';
-
 import { Masonry } from '@mui/lab';
 import ReactPlayer from 'react-player';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="primary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://chindianese.github.io/">
-        Tay Hao Cheng 2020
-      </Link>{' '}
-      {/* {new Date().getFullYear()} */}
-      {'.'}
-    </Typography>
-  );
-}
 
 const cardData = [
   {
     title: "Skate?",
+    cover: "skate.webm",
+    coverType: 'video',
     desc: "Mobile app",
     moreInfo:
       <div>
-          <ReactPlayer width="100%"
+          {/* <ReactPlayer width="100%"
           url="areyouskatingtoday.mp4"
           controls={true}
-        />
+        /> */}
+    <ImageList cols={1}>
+          {[1].map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                src={`Skate (${item}).jpg`}
+                alt={item}
+                loading="..."
+              />
+              {/* <ImageListItemBar
+            title={item}
+            subtitle={<span>by: {item.author}</span>}
+            position="below"
+          /> */}
+            </ImageListItem>
+
+          ))}
+        </ImageList>
         <Typography>
           An IOS and Android app. Find skate spots and where your friends are skating! Create and customise your character to represent yourself!
         </Typography>
@@ -50,13 +53,15 @@ const cardData = [
   },
   {
     title: "Sleeve",
+    coverType: "video",
+    cover: "sleeve trailer.mp4",
     desc: "Design tattoo sleeves.",
     moreInfo:
       <div>
-        <ReactPlayer width="100%"
+        {/* <ReactPlayer width="100%"
           url="sleeve trailer.mp4"
           controls={true}
-        />
+        /> */}
         <Typography>
           Use a preset tattoo or upload your own. Built in babylonJS and hosted on Firebase.
         </Typography>
@@ -67,30 +72,33 @@ const cardData = [
   {
     title: "Dither Shaders",
     desc: "Custom Unity lighting",
+    coverType: 'img',
+    cover: 'dither.gif',
     moreInfo:
       <div>
         <Typography>Built with shader graph in URP. Custom lighting shader code pixelates lighting, toons it, and adds a dither effect. </Typography>
-        <img src={dither1} alt="loading..." width="100%" />
-        <img src={dither2} alt="loading..." width="100%" />
+        <img src={"Dither Shaders (1).gif"} alt="loading..." width="100%" />
       </div>,
   },
   {
     title: "Wet Shader",
     desc: "Unity shader for dynamic wet ground",
+    cover:"Wet Shader.mp4",
+    coverType: "video",
     moreInfo:
       <div>
         <Typography>Built with shader graph in URP. Wet ground and puddle shader blends height maps, and noise maps to create dynamic puddles.</Typography>
-        <ReactPlayer width="100%"
+        {/* <ReactPlayer width="100%"
           url="Wet Shader.mp4"
           controls={true}
-        />
+        /> */}
         <ImageList cols={2}>
           {[2, 3, 4].map((item) => (
             <ImageListItem key={item.img}>
               <img
                 src={`Wet Shader (${item}).jpg`}
                 alt={item}
-                loading="...."
+                loading="..."
               />
               {/* <ImageListItemBar
             title={item}
@@ -179,7 +187,7 @@ export default function Album() {
           </Typography>
         </Container>
       </Box>
-      <Container sx={{ py: 2 }} maxWidth="xl">
+      <Container sx={{ py: 2 }} maxWidth="lg">
         {/* End hero unit */}
         <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2}>
           {cardData.map((card) => (
@@ -187,22 +195,7 @@ export default function Album() {
           ))}
         </Masonry>
       </Container>
-      {/* Footer */}
-      <Box sx={{ p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom color="primary.light">
-          Tay Hao Cheng btw
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="primary.light"
-          component="p"
-        >
-          That's all folks
-        </Typography>
-        <Copyright />
-      </Box>
-      {/* End footer */}
+
     </main>
   );
 }

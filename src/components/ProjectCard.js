@@ -1,4 +1,4 @@
-import { TextRotateUp } from '@mui/icons-material';
+
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -29,11 +29,15 @@ export default function ProjectCard(props) {
 
   return (
     <Card sx={{ display: 'flex', flexDirection: 'column' }} >
-
       <CardMedia
-        component="img"
-        image={props.cardData.title === "title" ? "https://source.unsplash.com/random" : `${props.cardData.title.replace('?', '')} (1).jpg`}
-        alt="random"
+        component={props.cardData.coverType ? props.cardData.coverType : 'img'}
+        // image={props.cardData.title === "title" ? "https://source.unsplash.com/random" : `${props.cardData.title.replace('?', '')} (1).jpg`}
+        image={props.cardData.title === "title" ? "https://source.unsplash.com/random" : props.cardData.cover ?props.cardData.cover:`${props.cardData.title} (1).jpg`}
+        alt="cover image here lol"
+        controls
+        muted
+        autoPlay
+        loop
       />
       <CardContent sx={{ flexGrow: 1 }}>
         <Typography gutterBottom variant="h5" component="h2">
