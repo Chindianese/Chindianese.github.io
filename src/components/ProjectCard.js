@@ -41,6 +41,7 @@ export default function ProjectCard(props) {
         muted
         autoPlay
         loop
+        playsInline
       />
 
       <CardActionArea onClick={handleExpandClick}>
