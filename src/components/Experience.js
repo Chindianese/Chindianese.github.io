@@ -11,7 +11,7 @@ const text = "Completed a 2-month internship that transitioned into a contracted
 +"\nAs the project lead, I managed future interns and junior developers, ensuring efficient workflow and effective task delegation."  
 + "\nI was responsible for understanding project requirements, creating game design and technical design documents, and delegating tasks to the development team."
   + "\nDuring my time there, I contributed to diverse projects including VR experiences (team size 2-3), image classification using machine learning, and mobile game development."
-const para = text.split('\n').map((str, index) => <p key={index}>{str}</p>)
+const para = text.split('\n').map((str, index) => <Typography key={index}>{str}</Typography>)
 const cardData = [
   {
     title: "Immersively",
