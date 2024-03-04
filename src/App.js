@@ -38,6 +38,9 @@ const lightTheme = createTheme({
     },
   },
   typography: {
+    h1:{
+      fontSize: 25,
+    },
     body1:
     {
       fontSize: 18,
