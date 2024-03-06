@@ -38,9 +38,7 @@ const lightTheme = createTheme({
     },
   },
   typography: {
-    h3:{
-      fontSize: 25,
-    },
+  
     body1:
     {
       fontSize: 18,
@@ -67,9 +65,7 @@ const darkTheme = createTheme({
     },
   },
   typography: {
-    h3:{
-      fontSize: 25,
-    },
+
     body1:
     {
       fontSize: 18,

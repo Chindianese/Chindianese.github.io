@@ -18,8 +18,8 @@ export default function AboutMe(props) {
         Hey there! I am
       </Typography>
       <Typography
-        component="h3"
-        variant="h3"
+      sx={{fontSize: 25}}
+        variant="h2"
         align="center"
         color="primary">
         Tay Hao Cheng - A Technical Artist based in Singapore
