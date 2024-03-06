@@ -8,7 +8,7 @@ export default function AboutMe(props) {
   return (
     <Container style={{ margin: 'auto', } }maxWidth="md">   
       <Typography
-        component="h1"
+        component="h2"
         variant="h2"
         align="center"
         color="primary">
@@ -18,8 +18,8 @@ export default function AboutMe(props) {
         Hey there! I am
       </Typography>
       <Typography
-        component="h1"
-        variant="h1"
+        component="h3"
+        variant="h3"
         align="center"
         color="primary">
         Tay Hao Cheng - A Technical Artist based in Singapore
