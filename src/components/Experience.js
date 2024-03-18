@@ -14,8 +14,9 @@ const text = "Completed a 2-month internship that transitioned into a contracted
 const para = text.split('\n').map((str, index) => <Typography key={index}>{str}</Typography>)
 const cardData = [
   {
-    title: "Immersively",
-    desc: "Unity Developer (Feb 2021 - Jun 2021)",
+    titleRoot: "Immersively",
+    title: "Immersively - Unity Developer",
+    desc: "7 months, Dec 2020 - Jun 2021",
     moreInfo: para
   }
 ]
@@ -45,7 +46,7 @@ export default function Experience() {
         {/* End hero unit */}
         <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2}>
           {cardData.map((card) => (
-            <ProjectCard cardData={card} key={'cardexp ' + card.title} />
+            <ProjectCard cardData={card} key={'cardexp ' + card.titleRoot} />
           ))}
         </Masonry>
       </Container>
