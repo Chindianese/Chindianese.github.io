@@ -1,4 +1,4 @@
-import {  Container, Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import * as React from 'react';
 import Coffee from './Coffee';
 
@@ -6,7 +6,7 @@ import Coffee from './Coffee';
 
 export default function AboutMe(props) {
   return (
-    <Container style={{ margin: 'auto', } }maxWidth="md">   
+    <Container style={{ margin: 'auto', }} maxWidth="md">
       <Typography
         component="h1"
         variant="h2"
@@ -28,11 +28,13 @@ export default function AboutMe(props) {
         ...and I like making stuff that looks cool.
       </Typography>
       <Typography color="primary.light">
-       I specialise in game development and most of my experience is in Unity, but I'm also well-versed in mobile app development (React Native & PWAs) and web development (ReactJS).
+        I specialise in game development and most of my experience is in Unity, but I'm also well-versed in mobile app development (React Native & PWAs) and web development (ReactJS).
       </Typography>
-      <Typography  color="primary.light">In my previous projects, I have built shaders in Unity Shader Graph, and wrote custom lighting in hlsl to create unique effects and lighting not often seen in games. I'm always eager to learn new things and push the boundaries of game design and development. </Typography>
       <Typography color="primary.light">
-      Please hire me. 👉🏾👈🏾
+        In previous projects, I built shaders in Unity Shader Graph and wrote custom lighting in HLSL to create unique effects and lighting not often seen in games. I'm always eager to learn new things and push the boundaries of game design and development.
+      </Typography>
+      <Typography color="primary.light">
+        Please hire me. 👉🏾👈🏾
       </Typography>
       {/* <Typography color="primary.light">Or..</Typography>
       <Coffee></Coffee> */}

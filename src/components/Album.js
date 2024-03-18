@@ -92,6 +92,46 @@ export default function Album() {
         </div>
 
     },
+
+    {
+      title: "Wet Ground & Puddle Shader",
+      desc: "Wet ground shader",
+      cover: "Wet Shader.gif",
+      coverType: "img",
+      moreInfo:
+        <div>
+          <Typography variant="p1">
+            From analyzing a puddle to creating a shader, I documented my design process in this article:
+          </Typography>
+          <Typography></Typography>
+           <Link href="https://medium.com/@tayhaocheng.media/creating-a-puddles-shader-in-unity-from-observation-to-implementation-828f85dc2a4e">Medium | Creating a Puddles Shader in Unity | Tay Hao Cheng</Link>
+          <Typography>
+            This custom shader, built within Unity's Shader Graph with URP (Universal Render Pipeline), dynamically simulates wet ground and puddles, enhancing the realism of your environments.
+          </Typography>
+          <Typography>
+            <strong>Realistic Wetness: </strong>Creates a convincing wet ground appearance, with a sheen and reflections.
+          </Typography>
+          <Typography>
+            <strong>Dynamic Puddles: </strong>Simulates puddles that accumulate and recede.
+          </Typography>
+          <Typography>
+            These effects are in use for a game I am currently working on!
+          </Typography>
+          <ImageList cols={2}>
+            {[1, 2, 3].map((item) => (
+              <ImageListItem key={'wet' + item.img}>
+                {ExpandableImage(`Wet Shader (${item}).jpg`)}
+                {/* <ImageListItemBar
+              title={item}
+              subtitle={<span>by: {item.author}</span>}
+              position="below"
+            /> */}
+              </ImageListItem>
+
+            ))}
+          </ImageList>
+        </div>,
+    },
     {
       title: "Dither Shaders",
       desc: "Custom Unity lighting",
@@ -119,44 +159,6 @@ export default function Album() {
             These effects are in use for a game I am currently working on!
           </Typography>
           {ExpandableImage("Dither Shaders (1).gif")}
-        </div>,
-    },
-    {
-      title: "Wet Ground & Puddle Shader",
-      desc: "Unity shader dynamic wet ground",
-      cover: "Wet Shader.mp4",
-      coverType: "video",
-      moreInfo:
-        <div>
-          <Typography variant="h6">Wet Ground & Puddle Shader - Realistic Surface Effects for URP Games</Typography>
-          <Typography variant="p1">
-            How I implemented these effect will be documented in a blog (coming soon)
-          </Typography>
-          <Typography>
-            This custom shader, built within Unity's Shader Graph and compatible with URP (Universal Render Pipeline), dynamically simulates wet ground and puddles, enhancing the realism of your environments.
-          </Typography>
-          <Typography>
-            <strong>Realistic Wetness: </strong>Creates a convincing wet ground appearance, with a subtle sheen and reflections.
-          </Typography>
-          <Typography>
-            <strong>Dynamic Puddles: </strong>Simulates puddles that accumulate and recede based on pre-defined conditions, adding depth and interactivity to your scenes.
-          </Typography>
-          <Typography>
-            These effects are in use for a game I am currently working on!
-          </Typography>
-          <ImageList cols={2}>
-            {[2, 3, 4].map((item) => (
-              <ImageListItem key={'wet' + item.img}>
-                {ExpandableImage(`Wet Shader (${item}).jpg`)}
-                {/* <ImageListItemBar
-              title={item}
-              subtitle={<span>by: {item.author}</span>}
-              position="below"
-            /> */}
-              </ImageListItem>
-
-            ))}
-          </ImageList>
         </div>,
     },
     {
