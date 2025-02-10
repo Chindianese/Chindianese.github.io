@@ -25,7 +25,7 @@ export default function Album() {
   const cardData = [
     {
       title: "Maybe we should go",
-      cover: "maybeweshouldgo.mov",
+      cover: "maybeweshouldgo.mp4",
       coverType: 'video',
       desc: "Mobile Game",
       moreInfo:
