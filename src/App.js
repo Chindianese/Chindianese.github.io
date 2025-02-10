@@ -99,8 +99,8 @@ function App() {
           <div className='Babylon'> <NonDeclarative toggleTheme={toggleTheme}></NonDeclarative></div>
         </div>
         <AboutMe></AboutMe>
-        <Album></Album>
         <Experience></Experience>
+        <Album></Album>
         {/* Footer */}
         <Box sx={{ p: 6 }} component="footer">
           <Typography variant="h6" align="center" gutterBottom color="primary.light">

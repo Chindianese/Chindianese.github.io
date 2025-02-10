@@ -7,18 +7,30 @@ import ProjectCard from './ProjectCard';
 
 import { Masonry } from '@mui/lab';
 
-const text = "Completed a 2-month internship that transitioned into a contracted development role for 5 months. "
-+"\nAs the project lead, I managed future interns and junior developers, ensuring efficient workflow and effective task delegation."  
-+ "\nI was responsible for understanding project requirements, creating game design and technical design documents, and delegating tasks to the development team."
-  + "\nDuring my time there, I contributed to diverse projects including VR experiences (team size 2-3), image classification using machine learning, and mobile game development."
+const text = "During my time here, I wrote game design and technical design documents."
++"\nI mainly worked on game development using Unity and C#."
+  + "\nDuring my time there, I contributed to diverse projects including AR, VR experiences (team size 2-3), image classification using machine learning, and mobile game development."
 const para = text.split('\n').map((str, index) => <Typography key={index}>{str}</Typography>)
+
+const text_reso = "Wrote Python scripts for data visualisation"
++"\nWorked with Oracle and Postgres database"
++"\nUpgraded and maintained dot net programs"
+const para_reso = text_reso.split('\n').map((str, index) => <Typography key={index}>{str}</Typography>)
+
+
 const cardData = [
+  {
+    titleRoot: "Resonac",
+    title: "Resonac - Senior Engineer Assistant",
+    desc: "May 2024 - Present",
+    moreInfo: para_reso
+  },
   {
     titleRoot: "Immersively",
     title: "Immersively - Unity Developer",
-    desc: "7 months, Dec 2020 - Jun 2021",
+    desc: "Dec 2020 - Jun 2021",
     moreInfo: para
-  }
+  },
 ]
 
 export default function Experience() {

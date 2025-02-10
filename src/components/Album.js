@@ -19,15 +19,34 @@ export default function Album() {
     console.log(image)
   }
   function ExpandableImage(image) {
-    return <img key={image}onClick={() => { openImage(image) }} src={image} alt="loading..." width="100%" />
+    return <img key={image} onClick={() => { openImage(image) }} src={image} alt="loading..." width="100%" />
   }
 
   const cardData = [
     {
+      title: "Maybe we should go",
+      cover: "maybeweshouldgo.mov",
+      coverType: 'video',
+      desc: "Mobile Game",
+      moreInfo:
+        <div>
+          <Typography>
+            A 5 minute narrative micro game about two kids talking about a life and uni.
+          </Typography>
+          <Typography>
+            Built in Unity Engine for Android and IOS.
+          </Typography>
+          <Link href="https://apps.apple.com/us/app/skate/id6451195071">app store</Link>
+          <Typography></Typography>
+          <Link href=" https://play.google.com/store/apps/details?id=com.chindianese.areyouskatingtoday">play store</Link>
+
+        </div>
+    },
+    {
       title: "Skate?",
       cover: "areyouskatingtoday.mp4",
       coverType: 'video',
-      desc: "Mobile app",
+      desc: "Mobile App",
       moreInfo:
         <div>
           {/* <ReactPlayer width="100%"
@@ -51,9 +70,6 @@ export default function Album() {
             <strong>Express yourself: </strong>Create and personalize your digital skater avatar to represent your unique style.
           </Typography>
           <Typography>
-            Built with React Native for a smooth and seamless user experience on both iOS and Android devices.
-          </Typography>
-          <Typography>
             Built in react native.
           </Typography>
           <Link href="https://apps.apple.com/us/app/skate/id6451195071">app store</Link>
@@ -66,7 +82,7 @@ export default function Album() {
       title: "Sleeve",
       coverType: "video",
       cover: "sleeve trailer.mp4",
-      desc: "Web app",
+      desc: "Web App",
       moreInfo:
         <div>
           <Typography variant="h6">Sleeve - Try on and design a tattoo sleeve</Typography>
@@ -95,7 +111,7 @@ export default function Album() {
 
     {
       title: "Wet Ground & Puddle Shader",
-      desc: "Wet ground shader",
+      desc: "Unity Shader",
       cover: "Wet Shader.gif",
       coverType: "img",
       moreInfo:
@@ -104,7 +120,7 @@ export default function Album() {
             From analyzing a puddle to creating a shader, I documented my design process in this article:
           </Typography>
           <Typography></Typography>
-           <Link href="https://medium.com/@tayhaocheng.media/creating-a-puddles-shader-in-unity-from-observation-to-implementation-828f85dc2a4e">Medium | Creating a Puddles Shader in Unity | Tay Hao Cheng</Link>
+          <Link href="https://medium.com/@tayhaocheng.media/creating-a-puddles-shader-in-unity-from-observation-to-implementation-828f85dc2a4e">Medium | Creating a Puddles Shader in Unity | Tay Hao Cheng</Link>
           <Typography>
             This custom shader, built within Unity's Shader Graph with URP (Universal Render Pipeline), dynamically simulates wet ground and puddles, enhancing the realism of your environments.
           </Typography>
@@ -134,7 +150,7 @@ export default function Album() {
     },
     {
       title: "Dither Shaders",
-      desc: "Custom Unity lighting",
+      desc: "Unity Shader",
       coverType: 'img',
       cover: 'dither.gif',
       moreInfo:
@@ -163,7 +179,7 @@ export default function Album() {
     },
     {
       title: "EVE",
-      desc: "App for taking attendance",
+      desc: "Mobile App",
       moreInfo:
         <div>
           <Typography>
@@ -172,7 +188,7 @@ export default function Album() {
           <ImageList cols={2}>
             {[2, 3, 4].map((item) => (
               <ImageListItem key={'eve' + item.img}>
-               {ExpandableImage(`EVE (${item}).jpg`)}
+                {ExpandableImage(`EVE (${item}).jpg`)}
                 {/* <ImageListItemBar
               title={item}
               subtitle={<span>by: {item.author}</span>}
@@ -260,7 +276,7 @@ export default function Album() {
           backgroundColor: '#808080',
           p: 2,
         }}>
-          <img src={modalImage}   width={"100%"} height={"100%"} style={{objectFit: 'contain'}}></img>
+          <img src={modalImage} width={"100%"} height={"100%"} style={{ objectFit: 'contain' }}></img>
         </Box>
       </Modal>
     </main>
